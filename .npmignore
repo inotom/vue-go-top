@@ -1,0 +1,9 @@
+src/
+config/
+.babelrc
+.browserlistrc
+.editorconfig
+.eslintrc
+.node-version
+.prettierrc
+.tern-project
