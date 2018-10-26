@@ -1,7 +1,7 @@
 src/
 config/
 .babelrc
-.browserlistrc
+.browserslistrc
 .editorconfig
 .eslintrc
 .node-version
