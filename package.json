@@ -22,7 +22,9 @@
     "type": "git",
     "url": "git+https://github.com/inotom/vue-go-top.git"
   },
-  "keywords": [],
+  "keywords": [
+    "vue"
+  ],
   "author": "inotom (http://www.serendip.ws/)",
   "license": "MIT",
   "bugs": {
