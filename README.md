@@ -67,7 +67,7 @@ export default {
 
 | name           | type               | defaults                  | description                                 |
 |----------------|--------------------|---------------------------|---------------------------------------------|
-| `:size`        | `Number`           | `50`                      | width/height pixel size                     |
+| `:size`        | `Number`           | `70`                      | width/height pixel size                     |
 | `:right`       | `String`, `Number` | `50`                      | margin from right                           |
 | `:bottom`      | `String`, `Number` | `100`                     | margin from bottom                          |
 | `:bottom-gap`  | `String`, `Number` | `0`                       | gap of bottom margin                        |
