@@ -1,6 +1,6 @@
 {
   "name": "@inotom/vue-go-top",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scroll to page top button, Vue.js component.",
   "main": "dist/vue-go-top.umd.js",
   "cdn": "dist/vue-go-top.min.js",
