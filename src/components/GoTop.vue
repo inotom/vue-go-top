@@ -144,17 +144,25 @@ export default {
         width: '200%',
         height: '200%',
         backgroundColor: this.rippleBg
-      }
+      },
+      throttleScroll: null,
+      throttleResize: null
     };
   },
   created() {
     this.handleResize();
-    window.addEventListener('resize', throttle(THROTTLE_DELAY, this.handleResize));
-    window.addEventListener('scroll', throttle(THROTTLE_DELAY, this.handleScroll));
+    this.throttleScroll = throttle(THROTTLE_DELAY, this.handleScroll);
+    this.throttleResize = throttle(THROTTLE_DELAY, this.handleResize);
+    window.addEventListener('resize', this.throttleResize);
+    window.addEventListener('scroll', this.throttleScroll);
   },
   beforeDestroy() {
-    window.removeEventListener('resize', throttle(THROTTLE_DELAY, this.handleResize));
-    window.removeEventListener('scroll', throttle(THROTTLE_DELAY, this.handleScroll));
+    if (this.throttleResize) {
+      window.removeEventListener('resize', this.throttleResize);
+    }
+    if (this.throttleScroll) {
+      window.removeEventListener('scroll', this.throttleScroll);
+    }
   },
   methods: {
     clickHandle(e) {
