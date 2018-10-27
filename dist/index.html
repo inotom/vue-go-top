@@ -55,7 +55,24 @@ body {
 </div>
 
 <div id="app">
-  <go-top></go-top>
+  <go-top
+    :size="100"
+    :right="200"
+    :bottom="50"
+    :bottom-gap="50"
+    :z-index="100"
+    fg-color="#000"
+    bg-color="#fee"
+    :radius="5"
+    weight="bold"
+    ripple-bg="rgba(0, 0, 0, .5)"
+    :boundary="500"
+    :max-width="0">
+    TOP
+  </go-top>
+  <go-top>
+    TOP
+  </go-top>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
