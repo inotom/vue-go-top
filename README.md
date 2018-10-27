@@ -81,7 +81,7 @@ export default {
 | `:max-width`   | `Number`           | `640`                     | media query max-width(px)                   |
 | `src`          | `String`           | `null`                    | image url                                   |
 | `alt`          | `String`           | ``                        | alternative text for image                  |
-| `:has-outline` | `Boolean`          | `false`                   | show outline when focus                     |
+| `:has-outline` | `Boolean`          | `true`                    | show outline when focus                     |
 
 
 ## License
