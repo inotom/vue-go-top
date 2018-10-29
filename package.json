@@ -12,7 +12,6 @@
     "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "prebuild": "rimraf $npm_package_config_dist_dir/vue-go-top.* && npm run clean && npm test",
     "build": "NODE_ENV=production webpack -p --config config/webpack.prod.js",
-    "publish": "npm publish --access=public",
     "clean": "rimraf '**/.DS_Store'",
     "lint": "eslint $npm_package_config_src_dir",
     "prettier": "prettier --write 'src/**/*.js'",
