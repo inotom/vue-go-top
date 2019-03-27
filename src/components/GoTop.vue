@@ -116,6 +116,10 @@ export default {
     hasOutline: {
       type: Boolean,
       default: true
+    },
+    boxShadow: {
+      type: String,
+      default: '1px 1px 2px rgba(0, 0, 0, .3)'
     }
   },
   data() {
@@ -134,6 +138,7 @@ export default {
         backgroundColor: this.bgColor,
         backgroundImage: `url("${makeBgImage(this.weight, this.fgColor)}")`,
         backgroundSize: `${this.size} auto`,
+        boxShadow: this.boxShadow,
         opacity: this.opacity,
         borderRadius: fmtProp(this.radius),
         ...outline,
@@ -209,7 +214,6 @@ export default {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 70% auto;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
   white-space: nowrap;
   text-indent: 100%;
 

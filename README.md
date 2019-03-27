@@ -65,23 +65,24 @@ export default {
 
 ## Props
 
-| name           | type               | defaults                  | description                                 |
-|----------------|--------------------|---------------------------|---------------------------------------------|
-| `:size`        | `Number`           | `70`                      | width/height pixel size                     |
-| `:right`       | `String`, `Number` | `50`                      | margin from right                           |
-| `:bottom`      | `String`, `Number` | `100`                     | margin from bottom                          |
-| `:bottom-gap`  | `String`, `Number` | `0`                       | gap of bottom margin                        |
-| `:z-index`     | `Number`           | `1000`                    | z-index size                                |
-| `fg-color`     | `String`           | `#ffffff`                 | text color                                  |
-| `bg-color`     | `String`           | `#ffc966`                 | background color                            |
-| `:radius`      | `String`, `Number` | `50%`                     | border-radius size                          |
-| `weight`       | `String`           | `normal`                  | line weight of arrow                        |
-| `ripple-bg`    | `String`           | `rgba(255, 255, 255, .5)` | ripple animation color                      |
-| `:boundary`    | `Number`           | `200`                     | top position where the element is displayed |
-| `:max-width`   | `Number`           | `640`                     | media query max-width(px)                   |
-| `src`          | `String`           | `null`                    | image url                                   |
-| `alt`          | `String`           | ``                        | alternative text for image                  |
-| `:has-outline` | `Boolean`          | `true`                    | show outline when focus                     |
+| name           | type               | defaults                        | description                                 |
+|----------------|--------------------|---------------------------------|---------------------------------------------|
+| `:size`        | `Number`           | `70`                            | width/height pixel size                     |
+| `:right`       | `String`, `Number` | `50`                            | margin from right                           |
+| `:bottom`      | `String`, `Number` | `100`                           | margin from bottom                          |
+| `:bottom-gap`  | `String`, `Number` | `0`                             | gap of bottom margin                        |
+| `:z-index`     | `Number`           | `1000`                          | z-index size                                |
+| `fg-color`     | `String`           | `#ffffff`                       | text color                                  |
+| `bg-color`     | `String`           | `#ffc966`                       | background color                            |
+| `:radius`      | `String`, `Number` | `50%`                           | border-radius size                          |
+| `weight`       | `String`           | `normal`                        | line weight of arrow                        |
+| `ripple-bg`    | `String`           | `rgba(255, 255, 255, .5)`       | ripple animation color                      |
+| `:boundary`    | `Number`           | `200`                           | top position where the element is displayed |
+| `:max-width`   | `Number`           | `640`                           | media query max-width(px)                   |
+| `src`          | `String`           | `null`                          | image url                                   |
+| `alt`          | `String`           | ``                              | alternative text for image                  |
+| `:has-outline` | `Boolean`          | `true`                          | show outline when focus                     |
+| `box-shadow`   | `String`           | `1px 1px 2px rgba(0, 0, 0, .3)` | box-shadow property                   |
 
 
 ## License
