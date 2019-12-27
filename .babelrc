@@ -3,6 +3,8 @@
     [
       "@babel/preset-env",
       {
+        "useBuiltIns": "usage",
+        "corejs": 3,
         "targets": {
           "browsers": ["last 1 versions", "ie 11"]
         }

@@ -83,6 +83,7 @@ export default {
 | `alt`          | `String`           | ``                              | alternative text for image                  |
 | `:has-outline` | `Boolean`          | `true`                          | show outline when focus                     |
 | `box-shadow`   | `String`           | `1px 1px 2px rgba(0, 0, 0, .3)` | box-shadow property                   |
+| `:tabindex`    | `Number`           | `0`                             | tabindex property                     |
 
 
 ## License
