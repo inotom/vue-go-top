@@ -44,6 +44,7 @@ import { throttle } from 'throttle-debounce';
 import SweetScroll from 'sweet-scroll';
 
 const KEY_ENTER = 13;
+const KEY_SPACE = 32;
 const RIPPLE_DURATION = 750;
 const THROTTLE_DELAY = 100;
 
@@ -208,7 +209,7 @@ export default {
       }
     },
     keyEnter(e) {
-      if (e.keyCode === KEY_ENTER) {
+      if (e.keyCode === KEY_ENTER || e.keyCode === KEY_SPACE) {
         scroller.to(0);
       }
     }
