@@ -4,30 +4,36 @@
       v-if="isActive && enabled"
       :style="mainStyle"
       role="button"
-      tabindex="1"
+      :tabindex="tabindex"
       class="vue-go-top"
       @click.prevent="clickHandle"
-      @keydown.prevent="keyEnter">
+      @keydown.prevent="keyEnter"
+    >
       <div
         v-if="src !== null"
-        class="vue-go-top__icon">
+        class="vue-go-top__icon"
+      >
         <img
           :src="src"
           :alt="alt"
-          class="vue-go-top__image">
+          class="vue-go-top__image"
+        >
         <div
           :is-active="isRippleActive"
           :style="rippleStyle"
-          class="vue-go-top__ripple"/>
+          class="vue-go-top__ripple"
+        />
       </div>
       <div
         v-else
-        class="vue-go-top__content">
+        class="vue-go-top__content"
+      >
         <div
           :is-active="isRippleActive"
           :style="rippleStyle"
-          class="vue-go-top__ripple"/>
-        <slot/>
+          class="vue-go-top__ripple"
+        />
+        <slot />
       </div>
     </div>
   </transition>
@@ -120,7 +126,11 @@ export default {
     boxShadow: {
       type: String,
       default: '1px 1px 2px rgba(0, 0, 0, .3)'
-    }
+    },
+    tabindex: {
+      type: Number,
+      default: 0,
+    },
   },
   data() {
     const outline = this.hasOutline ? {} : { outline: '0 none' };
