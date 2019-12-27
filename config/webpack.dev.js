@@ -39,8 +39,7 @@ module.exports = merge(common, {
           {
             loader: 'sass-loader',
             options: {
-              data: '$env: "development";',
-              outputStyle: 'expanded',
+              prependData: '$env: "development";',
               sourceMap: true
             }
           }

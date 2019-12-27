@@ -2,6 +2,7 @@
 
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -46,7 +47,17 @@ module.exports = {
     }
   },
   optimization: {
-    minimize: false
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        test: /\.js(\?.*)?$/i,
+        exclude: /node_modules/,
+        extractComments: false,
+        terserOptions: {
+          ecma: 5
+        }
+      })
+    ]
   },
   plugins: [new VueLoaderPlugin()]
 };

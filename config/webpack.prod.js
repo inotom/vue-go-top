@@ -8,7 +8,6 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const autoprefixer = require('autoprefixer');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const _config = merge(common, {
   mode: 'production',
@@ -35,8 +34,7 @@ const _config = merge(common, {
           {
             loader: 'sass-loader',
             options: {
-              data: '$env: "production";',
-              outputStyle: 'compressed',
+              prependData: '$env: "production";',
               sourceMap: false
             }
           }
@@ -46,15 +44,6 @@ const _config = merge(common, {
   },
   devtool: 'source-map',
   plugins: [
-    new UglifyJsPlugin({
-      sourceMap: true,
-      uglifyOptions: {
-        ecma: 8,
-        output: {
-          comments: 'some'
-        }
-      }
-    }),
     new webpack.BannerPlugin({
       banner: `${pkg.name} v${pkg.version} ${pkg.author} | ${pkg.license}`
     })
