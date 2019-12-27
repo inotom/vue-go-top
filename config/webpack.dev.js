@@ -14,7 +14,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, '..', pkg.config.dist_dir),
     filename: OPTS.BASE_OUT_NAME + '.min.js',
     libraryTarget: 'window',
-    library: OPTS.LIBRARY_NAME
+    library: OPTS.LIBRARY_NAME,
   },
   module: {
     rules: [
@@ -26,30 +26,30 @@ module.exports = merge(common, {
             loader: 'css-loader',
             options: {
               url: false,
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
               plugins: [autoprefixer()],
-              sourceMap: 'inline'
-            }
+              sourceMap: 'inline',
+            },
           },
           {
             loader: 'sass-loader',
             options: {
               prependData: '$env: "development";',
-              sourceMap: true
-            }
-          }
-        ]
-      }
-    ]
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
   },
   devtool: 'source-map',
   devServer: {
     contentBase: path.resolve(__dirname, '..', pkg.config.dist_dir),
-    port: OPTS.PORT
-  }
+    port: OPTS.PORT,
+  },
 });
