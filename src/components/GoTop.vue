@@ -147,7 +147,7 @@ export default {
         zIndex: this.zIndex,
         color: this.fgColor,
         backgroundColor: this.bgColor,
-        backgroundImage: `url("${makeBgImage(this.weight, this.fgColor)}")`,
+        backgroundImage: this.bgImage(),
         backgroundSize: `${this.size} auto`,
         boxShadow: this.boxShadow,
         opacity: this.opacity,
@@ -212,7 +212,13 @@ export default {
       if (e.keyCode === KEY_ENTER || e.keyCode === KEY_SPACE) {
         scroller.to(0);
       }
-    }
+    },
+    bgImage: function() {
+      if (this.src !== null) {
+        return 'none';
+      }
+      return `url("${makeBgImage(this.weight, this.fgColor)}")`;
+    },
   },
 };
 </script>
