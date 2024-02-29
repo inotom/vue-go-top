@@ -1,0 +1,87 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "vue"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".vue"],
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": false
+    }
+  },
+  "rules": {
+    "vue/singleline-html-element-content-newline": [
+      "error",
+      {
+        "ignoreWhenNoAttributes": true,
+        "ignoreWhenEmpty": true,
+        "ignores": ["pre", "textarea", "strong", "span", "slot"]
+      }
+    ],
+    "strict": [2, "function"],
+    "semi": 2,
+    "eqeqeq": 2,
+    "space-before-blocks": [2, "always"],
+    "space-before-function-paren": [2, {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "space-infix-ops": 2,
+    "keyword-spacing": 2,
+    "import/no-unresolved": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [2, "unix"],
+    "quotes": [2, "single"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ],
+    "curly": 2,
+    "camelcase": 2,
+    "brace-style": 2,
+    "no-trailing-spaces": 2,
+    "no-multiple-empty-lines": 2,
+    "no-nested-ternary": 2,
+    "no-var": 2,
+    "no-console": 0
+  },
+  "globals": {
+    "module": "readonly",
+    "defineProps": true,
+    "defineEmits": true,
+    "withDefaults": true
+  },
+  "env": {
+    "es6": true,
+    "commonjs": true,
+    "node": true,
+    "jest": true,
+    "browser": true
+  }
+}

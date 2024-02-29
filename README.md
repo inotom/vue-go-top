@@ -2,9 +2,11 @@
 
 Scroll to page top button, Vue.js component.
 
+From v2.0.0, it works for Vue 3.
+
 ## Demo
 
-[Demo](http://sandbox.serendip.ws/vue-go-top.html)
+[Demo](https://sandbox.serendip.ws/vue-go-top.html)
 
 
 ## Install
@@ -12,8 +14,10 @@ Scroll to page top button, Vue.js component.
 ### Browser
 
 ```html
-<script src="vue.js"></script>
-<script src="vue-go-top.min.js"></script>
+<script src="vue.global.prod.js"></script>
+<script src="https://unpkg.com/throttle-debounce@5/umd/index.js"></script>
+<script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+<script src="vue-go-top.umd.js"></script>
 ```
 
 
@@ -33,32 +37,32 @@ npm install --save @inotom/vue-go-top
   <go-top></go-top>
 </div>
 
-<script src="vue.js"></script>
-<script src="vue-go-top.min.js"></script>
+<script src="vue.global.prod.js"></script>
+<script src="https://unpkg.com/throttle-debounce@5/umd/index.js"></script>
+<script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
+<script src="vue-go-top.umd.js"></script>
 <script>
-Vue.use(GoTop);
-new Vue({
-  el: '#app'
-});
+const { createApp } = Vue;
+const { GoTop } = SwsVueGoTop;
+
+createApp({
+  components: {
+    GoTop,
+  },
+}).mount('#app');
 </script>
 ```
 
 
-### SFC
+### SFC (TypeScript)
 
 ```vue
 <template>
   <go-top></go-top>
 </template>
 
-<script>
-import GoTop from '@inotom/vue-go-top';
-
-export default {
-  components: {
-    GoTop
-  }
-}
+<script setup lang="ts">
+import { GoTop } from '@inotom/vue-go-top';
 </script>
 ```
 
@@ -82,8 +86,8 @@ export default {
 | `src`          | `String`           | `null`                          | image url                                   |
 | `alt`          | `String`           | ``                              | alternative text for image                  |
 | `:has-outline` | `Boolean`          | `true`                          | show outline when focus                     |
-| `box-shadow`   | `String`           | `1px 1px 2px rgba(0, 0, 0, .3)` | box-shadow property                   |
-| `:tabindex`    | `Number`           | `0`                             | tabindex property                     |
+| `box-shadow`   | `String`           | `1px 1px 2px rgba(0, 0, 0, .3)` | box-shadow property                         |
+| `:tabindex`    | `Number`           | `0`                             | tabindex property                           |
 
 
 ## License
